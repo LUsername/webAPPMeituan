@@ -11,7 +11,7 @@
     function initCategory() {
         //获取category的数据
         $.get('../json/head.json', function(data) {
-            console.log(data);
+            // console.log(data);
             var list = data.data.primary_filter.splice(0, 8);
             list.forEach(function(item, index) {
                 var str = itemTmpl

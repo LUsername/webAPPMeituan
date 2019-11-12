@@ -1,0 +1,108 @@
+.list-content {
+    overflow: hidden;
+    padding-bottom: 1.25rem;
+}
+
+.list-content .list-title {
+    font-size: .4rem;
+    margin-top: .35rem;
+    margin-bottom: .125rem;
+    text-align: center;
+}
+
+.list-content .title-line {
+    display: inline-block;
+    height: .025rem;
+    width: .75rem;
+    border: .025rem solid #949494;
+    margin: 0 .1rem .1rem;
+}
+
+.r-item-content {
+    position: relative;
+    display: flex;
+    margin: .375rem .25rem;
+    color: #656565;
+}
+
+.r-item-content .item-img {
+    width: 2.15rem;
+    height: 1.625rem;
+    border: .025rem solid #e4e4e4;
+}
+
+.r-item-content .item-info-content {
+    flex: 1;
+    margin-left: .175rem;
+    overflow: hidden;
+}
+
+.r-item-content .brand {
+    position: absolute;
+    left: .025rem;
+    top: .025rem;
+    font-size: .3rem;
+    padding: .05rem;
+    color: #fff;
+}
+
+.r-item-content .brand-pin {
+    background-color: #ffa627;
+}
+
+.r-item-content .brand-xin {
+    background-color: #21c56c;
+}
+
+.r-item-content .item-title {
+    margin-top: .075rem;
+    font-size: .4rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.r-item-content .item-desc {
+    margin-top: .325rem;
+    font-size: .3rem;
+}
+
+.r-item-content .item-score {
+    float: left;
+}
+
+.r-item-content .item-count {
+    float: left;
+    margin-left: .125rem;
+}
+
+.r-item-content .item-time {
+    float: right;
+}
+
+.r-item-content .item-distance {
+    float: right;
+}
+
+.r-item-content .item-price {
+    margin-top: .25rem;
+    font-size: .3rem;
+    height: .6rem;
+}
+
+.r-item-content .other-info {
+    color: #898989;
+    margin-top: .175rem;
+    font-size: .3rem;
+    display: flex;
+}
+
+.r-item-content .other-tag {
+    width: .35rem;
+    height: .35rem;
+}
+
+.other-content {
+    margin-left: .075rem;
+    height: .35rem;
+    width: 5.75rem;
+}
