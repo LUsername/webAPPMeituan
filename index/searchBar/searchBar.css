@@ -5,6 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: .2rem;
 }
 
 .search-bar .bar-location {
@@ -46,4 +47,32 @@
     position: absolute;
     right: -0.55rem;
     top: -0.025rem;
+}
+
+.search-bar .search-btn {
+    position: relative;
+    width: 4.25rem;
+    height: .75rem;
+    background-color: #fff;
+    border-radius: .5rem;
+}
+
+.search-bar .search-btn::before {
+    content: " ";
+    display: block;
+    width: .35rem;
+    height: .35rem;
+    background-image: url("../img/searchIcon.png");
+    background-size: cover;
+    position: absolute;
+    top: .2rem;
+    left: .2rem;
+}
+
+.search-bar .place-holder {
+    color: #a9a9a9;
+    font-size: .35rem;
+    height: 100%;
+    line-height: .75rem;
+    margin-left: .7rem;
 }
