@@ -18,15 +18,20 @@
         '</div>' +
         '</div>' +
         '</div>';
+    var page = 0;
+    var isLoading = false;
     /**
      * 获取商家列表数据
      * param
      */
     function getList() {
+        page++;
+        isLoading = true;
         $.get('../json/homelist.json', function(data) {
             console.log(data);
             var list = data.data.poilist || [];
             initContentList(list);
+            isLoading = false;
         })
     }
     /**
@@ -93,8 +98,30 @@
         });
     }
 
+    function addEvent() {
+        window.addEventListener("scroll", function() {
+            var clientHeight = this.document.documentElement.clientHeight;
+            var scrollHeight = this.document.body.scrollHeight;
+            var scrollTop = this.document.documentElement.scrollTop || this.document.body.scrollTop;
+            var proDis = 30;
+            if ((scrollTop + clientHeight) >= (scrollHeight - proDis)) {
+                // 最多滚动加载3页
+                if (page < 3) {
+                    // 在发送ajax请求时避免触发多次滚动加载
+                    if (isLoading) {
+                        return;
+                    }
+                    getList();
+
+                }
+
+            }
+        })
+    }
+
     function init() {
         getList();
+        addEvent();
     }
     init();
 })();
