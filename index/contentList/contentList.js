@@ -63,7 +63,7 @@
             //内部的商家活动模板字符串
             var _str = '<div class="other-info">' +
                 '<img src=$icon_url class="other-tag" />' +
-                '<p class="other-content">$info</p>' +
+                '<p class="other-content one-line">$info</p>' +
                 '</div>';
             //模板字符串替换数据
             _str = _str.replace('$icon_url', item.icon_url)
@@ -87,7 +87,8 @@
                 .replace("$mt_delivery_time", item.mt_delivery_time)
                 .replace("$monthNum", getMonthNum(item))
                 .replace("$brand", getBrand(item))
-                .replace("$others", getOthers(item));
+                .replace("$others", getOthers(item))
+                .replace("$wm_poi_score", new StarScore(item.wm_poi_score).getStars());
             $('.list-wrap').append($(str));
         });
     }
