@@ -21,8 +21,8 @@
     function getComment(data) {
         var evaluation = !data.is_comment;
         if (evaluation) {
-            return '<div class="evaluation">' +
-                '<div class="evaluation-btn"></div>' +
+            return '<div class="evaluation clearfix">' +
+                '<div class="evaluation-btn">评价</div>' +
                 '</div>';
         }
         return "";
@@ -37,7 +37,7 @@
             '<span>...</span>' +
             '<div class="p-total-count">' +
             '总计' + data.product_count + '个菜，实付' +
-            '<span class="total-price">' + data.total + '</span>' +
+            '<span class="total-price">￥' + data.total + '</span>' +
             '</div>' +
             '</div>';
         return str;
@@ -54,7 +54,7 @@
             if (item.type === "more") {
                 str += getTotalPrice(data);
             } else {
-                str += '<div class=""product-item>' +
+                str += '<div class="product-item">' +
                     item.product_name +
                     '<div class="p-count">×' +
                     item.product_count +
