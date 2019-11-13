@@ -92,3 +92,14 @@
     text-align: center;
     margin-right: .25rem;
 }
+
+.loading {
+    padding: .25rem 0;
+    font-size: .4rem;
+    text-align: center;
+    color: #ccc;
+}
+
+.wrap {
+    padding-bottom: 2.5rem;
+}

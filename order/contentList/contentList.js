@@ -79,20 +79,47 @@
         });
 
     }
+    var page = 0;
+    var isLoading = false;
     /**
      * 请求数据
      * @param
      */
     function getList() {
+        page++;
+        isLoading = true;
         $.get('../json/orders.json', function(data) {
             console.log(data);
             var list = data.data.digestlist || [];
             initContentList(list);
+            isLoading = false;
+        })
+    }
+
+    function addEvent() {
+        window.addEventListener('scroll', function() {
+            var clientHeight = this.document.documentElement.clientHeight;
+            var scrollHeight = this.document.body.scrollHeight;
+            var scrollTop = this.document.documentElement.scrollTop || this.document.body.scrollTop;
+            var preDis = 30;
+            if ((scrollTop + clientHeight) >= (scrollHeight - preDis)) {
+                if (page < 3) {
+                    if (isLoading) {
+                        return;
+                    }
+                    getList();
+                } else {
+                    $('.loading').text('加载完成');
+                }
+
+            }
         })
     }
 
     function init() {
         getList();
+        addEvent();
+
     }
     init();
 })();
