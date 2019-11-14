@@ -1,0 +1,102 @@
+.header {
+    width: 100%;
+    height: 4rem;
+    background-image: url('./img/header.png');
+    background-size: cover;
+    overflow: hidden;
+}
+
+.avatar {
+    width: 1.8rem;
+    height: 1.8rem;
+    margin: 0 auto;
+    display: block;
+    border: .075rem solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    margin-top: .625rem;
+}
+
+.nickname {
+    color: #333;
+    font-size: .4rem;
+    margin-top: .375rem;
+    text-align: center;
+}
+
+.content {
+    min-height: 12.675rem;
+    background-color: #eee;
+}
+
+.items {
+    border-bottom: .25rem solid #eee;
+    background-color: #fff;
+}
+
+.items li {
+    height: 1.125rem;
+    font-size: .35rem;
+    position: relative;
+    padding-left: .65rem;
+    margin-left: .375rem;
+    border-bottom: .025rem solid #e4e4e4;
+    line-height: 1.125rem;
+}
+
+.items li:last-child {
+    border: none;
+}
+
+.items li::before {
+    content: " ";
+    display: block;
+    width: .4rem;
+    height: .4rem;
+    position: absolute;
+    background-size: cover;
+    top: .35rem;
+    left: .025rem;
+}
+
+.address::before {
+    background-image: url('./img/address.png');
+}
+
+.money::before {
+    background-image: url('./img/money.png');
+}
+
+.email::before {
+    background-image: url('./img/email.png');
+}
+
+.question::before {
+    background-image: url('./img/question.png');
+}
+
+.items li::after {
+    content: '>';
+    display: block;
+    width: .4rem;
+    height: .4rem;
+    position: absolute;
+    top: 0;
+    right: .15rem;
+    color: #aaaaaa;
+}
+
+.tel {
+    font-size: .375rem;
+    color: #ffb000;
+    text-align: center;
+    height: 1.15rem;
+    line-height: 1.15rem;
+    background-color: #fff;
+}
+
+.time {
+    font-size: .35rem;
+    text-align: center;
+    margin-top: .325rem;
+    color: #999;
+}
