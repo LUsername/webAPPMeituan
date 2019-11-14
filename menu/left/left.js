@@ -32,14 +32,26 @@
     function initContentList(list) {
         list.forEach(function(item, index) {
             var str = itemTmpl.replace('$getItemContent', getItemContent(item));
+            // 将item数据挂载到left-item上面
             var $target = $(str);
             $target.data('itemData', item);
             $('.left-bar-inner').append($target);
         });
     }
 
+    function addClick() {
+        $('.menu-inner').on('click', '.left-item', function(e) {
+            var $target = $(e.currentTarget);
+            $target.addClass('active');
+            $target.siblings().removeClass('active');
+            // 将数据传给右侧详情列表进行渲染
+            window.Right.refresh($target.data('itemData'));
+        })
+    }
+
     function init() {
         getList();
+        addClick();
     }
     init();
 })();
