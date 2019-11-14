@@ -1,0 +1,49 @@
+.menu-inner {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 2.75rem;
+    display: flex;
+    overflow: hidden;
+}
+
+.menu-inner .left-bar {
+    width: 2.125rem;
+    background-color: #efefef;
+    overflow: auto;
+    height: 100%;
+    /* 使局部滚动在IOS系统中得到顺滑效果 */
+    -webkit-overflow-scrolling: touch;
+}
+
+.menu-inner .left-bar-inner {
+    padding-bottom: 2.125rem;
+}
+
+.menu-inner .left-item {
+    font-size: .35rem;
+    color: #656565;
+    text-align: center;
+    border-bottom: .025rem solid #bfbfbf;
+    display: flex;
+    justify-content: center;
+    height: 1.5rem;
+}
+
+.menu-inner .left-item.active {
+    background-color: #fff;
+}
+
+.menu-inner .item-text {
+    align-self: center;
+    text-align: center;
+}
+
+.menu-inner .item-icon {
+    width: .5rem;
+    height: .5rem;
+    display: inline-block;
+    margin-right: .15rem;
+    vertical-align: -0.1rem;
+}
