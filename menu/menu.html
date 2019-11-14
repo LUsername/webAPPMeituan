@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1,minimum-scale=1,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>深圳麦当劳前海二餐厅</title>
+    <script>
+        (function() {
+            var docEl = document.documentElement;
+
+            function setRemUnit() {
+                // 获取到rem的基准值
+                var rem = docEl.clientWidth / 10;
+                // 动态设置html根元素的font-size
+                docEl.style.fontSize = rem + "px";
+            }
+            setRemUnit();
+            //窗口大小变化时 触发
+            window.addEventListener("resize", setRemUnit);
+            //窗口出现在当前屏幕时 （有浏览器兼容性）
+            window.addEventListener("pageshow", function(e) {
+                if (e.persisted) {
+                    setRemUnit();
+                }
+
+            })
+        })()
+    </script>
+    <link rel="stylesheet" href="../lib/reset.css">
+    <link rel="stylesheet" href="../common/navHeader/navHeader.css">
+</head>
+
+<body>
+    <!-- 头部开始 -->
+    <div class="nav">
+        <div class="back-icon"></div>
+        <div class="title">深圳麦当劳前海二餐厅</div>
+    </div>
+    <!-- 头部结束 -->
+    <!-- tabbar开始 -->
+    <div class="tab-bar"></div>
+    <!-- tabbar结束 -->
+    <script src="../lib/jquery.min.js"></script>
+    <script src="../common/headerTab/headerTab.js"></script>
+</body>
+
+</html>
