@@ -1,0 +1,29 @@
+.tab-bar {
+    font-size: .4rem;
+    margin-top: 1.6rem;
+    display: flex;
+    border-bottom: .025rem solid #f0f0f0;
+}
+
+.tab-bar .tab-item {
+    flex: 1;
+    height: 1.125rem;
+    line-height: 1.125rem;
+    text-align: center;
+    position: relative;
+    color: #666;
+    text-decoration: none;
+}
+
+.tab-bar .tab-item.active::after {
+    content: " ";
+    display: block;
+    height: .1rem;
+    width: 1.5rem;
+    position: absolute;
+    bottom: 0;
+    background-color: #ffd161;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
