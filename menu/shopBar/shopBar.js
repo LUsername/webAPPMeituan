@@ -1,6 +1,6 @@
 (function() {
     // 顶部模板字符串
-    var itemTopTmpl = '<div class="choose-content hide">' +
+    var itemTopTmpl = '<div class="choose-content ">' +
         '<div class="content-top">' +
         '<div class="clear-car">清空购物车</div>' +
         '</div>' +

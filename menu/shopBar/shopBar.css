@@ -17,4 +17,80 @@
     height: 1.375rem;
     background-image: url('./img/shop-icon.png');
     background-size: cover;
+    position: relative;
+    margin-left: 0.32rem;
+    margin-top: -0.32rem;
+}
+
+.shop-bar .price-content {
+    flex: 1;
+    padding-top: .2rem;
+    padding-left: .175rem;
+}
+
+.shop-bar .total-price {
+    font-size: .5rem;
+    color: #fff;
+}
+
+.shop-bar .other-price {
+    font-size: .3rem;
+    color: #999;
+    margin-top: .05rem;
+}
+
+.shop-bar .dot-num {
+    position: absolute;
+    background-color: #fb4e44;
+    width: .375rem;
+    height: .375rem;
+    font-size: .3rem;
+    color: #fff;
+    border: .025rem solid #fff;
+    border-radius: 50%;
+    right: 0;
+    top: .05rem;
+    text-align: center;
+    line-height: .375rem
+}
+
+.shop-bar .submit-btn {
+    width: 2.75rem;
+    height: 100%;
+    background-color: #ffd161;
+    font-size: .4rem;
+    line-height: 1.25rem;
+    text-align: center;
+    color: #333;
+}
+
+.choose-content {
+    background-color: #fff;
+}
+
+.choose-content .content-top {
+    height: .875rem;
+    background-color: #f4f4f4;
+    font-size: .275rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.choose-content .clear-car {
+    margin-left: .25rem;
+    margin-right: .125rem;
+    position: relative;
+}
+
+.choose-content .clear-car::after {
+    width: .325rem;
+    height: .325rem;
+    display: block;
+    background-image: url('./img/clear.jpeg');
+    content: " ";
+    background-size: cover;
+    position: absolute;
+    top: -0.025rem;
+    left: -0.35rem;
 }
