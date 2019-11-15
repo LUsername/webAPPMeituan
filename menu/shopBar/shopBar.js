@@ -1,6 +1,6 @@
 (function() {
     // 顶部模板字符串
-    var itemTopTmpl = '<div class="choose-content ">' +
+    var itemTopTmpl = '<div class="choose-content hide">' +
         '<div class="content-top">' +
         '<div class="clear-car">清空购物车</div>' +
         '</div>' +
@@ -18,8 +18,29 @@
         '</div>';
     var $strTop = $(itemTopTmpl);
     var $strBottom = $(itemBottomTmpl);
+    /**
+     * 渲染数量红点
+     */
+    function changeDot() {
+        // 先拿到所有的count
+        var $counts = $strTop.find('.count');
+        var total = 0;
+        // 遍历每个count 相加
+        for (var i = 0; i < $counts.length; i++) {
+            total += parseInt($($counts[i]).text());
+        }
+        if (total > 0) {
+            $('.dot-num').show().text(total);
+        } else {
+            $('.dot-num').hide();
+        }
+    }
 
     function addClick() {
+        $('.shop-bar').on('click', '.shop-icon', function() {
+            $('.mask').toggle();
+            $strTop.toggle();
+        })
         $strTop.on('click', '.plus', function(e) {
             var $count = $(e.currentTarget).parent().find('.count');
             $count.text(parseInt($count.text() || '0') + 1);
@@ -52,11 +73,10 @@
     function changeShippingPrice(str) {
         $strBottom.find('.shipping-fee').text(str);
     }
-
+    /**
+     * 渲染购物车顶部
+     */
     function renderItems() {
-        // 
-        $('.choose-content').removeClass("hide");
-        // 
         $strTop.find('.choose-item').remove();
         var list = window.food_spu_tags || [];
         var tmpl = '<div class="choose-item">' +
@@ -86,7 +106,10 @@
                 }
             })
         });
+        // 改变总价
         changeTotalPrice(totalPrice);
+        // 改变红点数字
+        changeDot();
     }
 
     function init() {
