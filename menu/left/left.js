@@ -12,6 +12,7 @@
             console.log(data);
             window.food_spu_tags = data.data.food_spu_tags || [];
             initContentList(window.food_spu_tags);
+            window.ShopBar.changeShippingPrice(data.data.poi_info.shipping_fee || 0);
         })
     }
     /**
@@ -37,6 +38,7 @@
             $target.data('itemData', item);
             $('.left-bar-inner').append($target);
         });
+        $('.left-item').first().click();
     }
 
     function addClick() {
