@@ -10,8 +10,8 @@
     function getList() {
         $.get('../json/food.json', function(data) {
             console.log(data);
-            var list = data.data.food_spu_tags || [];
-            initContentList(list);
+            window.food_spu_tags = data.data.food_spu_tags || [];
+            initContentList(window.food_spu_tags);
         })
     }
     /**
