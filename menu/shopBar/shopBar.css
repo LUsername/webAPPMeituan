@@ -94,3 +94,52 @@
     top: -0.025rem;
     left: -0.35rem;
 }
+
+.choose-content .choose-item {
+    display: flex;
+    align-items: center;
+    color: #2f2f2f;
+    font-size: .375rem;
+    height: .875rem;
+    padding: .25rem 0;
+    border-bottom: .025rem solid #ddd;
+}
+
+.choose-content .choose-item .item-price {
+    margin-left: .125rem;
+    margin-right: .625rem;
+}
+
+.choose-content .choose-item .item-name {
+    flex: 1;
+    padding-left: .25rem;
+}
+
+.choose-content .select-content {
+    position: relative;
+    margin-right: .2rem;
+    display: flex;
+}
+
+.choose-content .plus {
+    width: .625rem;
+    height: .625rem;
+    background-image: url('./img/plus.png');
+    background-size: cover;
+}
+
+.choose-content .minus {
+    width: .625rem;
+    height: .625rem;
+    background-image: url('./img/minus.png');
+    background-size: cover;
+}
+
+.choose-content .count {
+    font-size: .375rem;
+    width: .625rem;
+    height: .625rem;
+    margin: 0 .05rem;
+    line-height: .625rem;
+    text-align: center;
+}

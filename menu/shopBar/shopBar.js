@@ -19,7 +19,18 @@
     var $strTop = $(itemTopTmpl);
     var $strBottom = $(itemBottomTmpl);
 
+    function changeTotalPrice(str) {
+        $strBottom.find('.total-price-span').text(str);
+    }
+
+    function changeShippingPrice(str) {
+        $strBottom.find('.shipping-fee').text(str);
+    }
+
     function renderItems() {
+        // 
+        $('.choose-content').removeClass("hide");
+        // 
         $strTop.find('.choose-item').remove();
         var list = window.food_spu_tags || [];
         var tmpl = '<div class="choose-item">' +
@@ -58,6 +69,8 @@
     }
     init();
     window.ShopBar = {
-        renderItems: renderItems
+        renderItems: renderItems,
+        changeShippingPrice: changeShippingPrice,
+        changeTotalPrice: changeTotalPrice
     }
 })();

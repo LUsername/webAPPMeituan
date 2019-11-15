@@ -45,6 +45,7 @@
             var $item = $(e.currentTarget).parents('.menu-item').first();
             var itemData = $item.data('itemData');
             itemData.chooseCount = itemData.chooseCount + 1;
+            window.ShopBar.renderItems();
         })
         $('.menu-item').on('click', '.minus', function(e) {
             var $count = $(e.currentTarget).parent().find('.count');
@@ -53,6 +54,7 @@
             var $item = $(e.currentTarget).parents('.menu-item').first();
             var itemData = $item.data('itemData');
             itemData.chooseCount = itemData.chooseCount - 1;
+            window.ShopBar.renderItems();
         })
     }
     /**
